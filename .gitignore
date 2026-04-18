@@ -1,5 +1,9 @@
 # Chrome Extension gitignore
 
+# Documentation files (except README)
+*.md
+!README.md
+
 # Packaged extension
 *.crx
 *.pem
@@ -20,10 +24,3 @@ Thumbs.db
 *.tmp
 *.bak
 *~
-
-Chrome-Extension\notebooklm-extension\ARCHITECTURE.md
-Chrome-Extension\notebooklm-extension\CHECKLIST.md
-Chrome-Extension\notebooklm-extension\INSTALL_GUIDE.md
-Chrome-Extension\notebooklm-extension\PROJECT_SUMMARY.md
-Chrome-Extension\notebooklm-extension\Z_INDEX_SOLUTION.md
-Chrome-Extension\notebooklm-extension\VISUAL_GUIDE.md
