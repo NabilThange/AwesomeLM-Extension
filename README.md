@@ -24,13 +24,13 @@ Choose one of these methods:
 1. Click the green **"Code"** button at the top of this repository.
 2. Select **"Download ZIP"**.
 3. Extract the ZIP file to your computer.
-4. Navigate to the `Chrome-Extension/notebooklm-extension` folder.
+4. Navigate to the `Chrome-Extension/AwesomeLM-Extension` folder.
 
 #### Option B: Fork & Clone (For Developers)
 1. Click **"Fork"** at the top-right of this repository.
 2. Clone your fork:
    ```bash
-   git clone [https://github.com/NabilThange/AwesomeLM-Extension.git](https://github.com/NabilThange/AwesomeLM-Extension.git)
+   git clone https://github.com/NabilThange/AwesomeLM-Extension.git
    cd AwesomeLM-Extension/Chrome-Extension/notebooklm-extension
    ```
 
