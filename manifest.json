@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "AwesomeLM NotebookLM Assistant",
+  "version": "1.0.0",
+  "description": "Enhance NotebookLM with AwesomeLM slide deck templates",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://notebooklm.google.com/*",
+    "https://qyhtrqobtwmbymviezcs.supabase.co/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://notebooklm.google.com/*"],
+      "js": [
+        "lib/cache.js",
+        "lib/supabase.js",
+        "lib/nlm.js",
+        "overlay.js",
+        "content_inject.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["overlay.css", "automation.js", "icons/*.png"],
+      "matches": ["https://notebooklm.google.com/*"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

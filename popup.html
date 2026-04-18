@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 320px;
+      padding: 16px;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #202124;
+    }
+
+    h1 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 14px 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #5f6368;
+    }
+
+    .card {
+      padding: 12px;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid #e8eaed;
+      margin-bottom: 14px;
+    }
+
+    .status.active {
+      border-color: #34a853;
+      background: #e6f4ea;
+    }
+
+    .status p,
+    .cache p {
+      margin: 0;
+      font-size: 13px;
+      color: #202124;
+    }
+
+    .cache-meta {
+      margin-top: 6px !important;
+      color: #5f6368 !important;
+      font-size: 12px !important;
+    }
+
+    h2 {
+      margin: 0 0 8px 0;
+      font-size: 13px;
+      font-weight: 600;
+      color: #202124;
+    }
+
+    ol {
+      margin: 0;
+      padding-left: 18px;
+      color: #5f6368;
+      font-size: 13px;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    .footer {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #e8eaed;
+      font-size: 12px;
+      color: #80868b;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>AwesomeLM for NotebookLM</h1>
+  <p>Use AwesomeLM's public prompt library inside NotebookLM's slide deck modal.</p>
+
+  <div class="card status" id="status">
+    <p id="status-text">Checking current tab...</p>
+  </div>
+
+  <div class="card cache">
+    <h2>Template cache</h2>
+    <p id="cache-text">Checking cache status...</p>
+    <p class="cache-meta" id="cache-meta"></p>
+  </div>
+
+  <div class="card instructions">
+    <h2>How it works</h2>
+    <ol>
+      <li>Open a notebook in NotebookLM.</li>
+      <li>Open the Customize Slide Deck modal.</li>
+      <li>Click the AwesomeLM trigger button near the prompt textarea.</li>
+      <li>Pick a template and click Fill.</li>
+    </ol>
+  </div>
+
+  <div class="footer">v1.0.0 • Public templates only</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

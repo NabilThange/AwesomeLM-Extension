@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Icon Generator - NotebookLM Extension</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    
+    h1 {
+      color: #1a73e8;
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      color: #5f6368;
+      margin-bottom: 30px;
+    }
+    
+    .canvas-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .canvas-item {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    
+    .canvas-item h3 {
+      margin: 0 0 15px 0;
+      font-size: 14px;
+      color: #202124;
+    }
+    
+    canvas {
+      border: 1px solid #e8eaed;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 15px;
+    }
+    
+    button {
+      background: #1a73e8;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    
+    button:hover {
+      background: #1557b0;
+    }
+    
+    .instructions {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 30px;
+      border-left: 4px solid #1a73e8;
+    }
+    
+    .instructions h2 {
+      margin-top: 0;
+      color: #202124;
+    }
+    
+    .instructions ol {
+      color: #5f6368;
+      line-height: 1.8;
+    }
+    
+    .instructions code {
+      background: #f8f9fa;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>📋 Icon Generator</h1>
+  <p class="subtitle">Generate placeholder icons for your NotebookLM extension</p>
+  
+  <div class="canvas-container">
+    <div class="canvas-item">
+      <h3>16x16</h3>
+      <canvas id="canvas16" width="16" height="16"></canvas>
+      <button onclick="downloadIcon(16)">Download</button>
+    </div>
+    
+    <div class="canvas-item">
+      <h3>32x32</h3>
+      <canvas id="canvas32" width="32" height="32"></canvas>
+      <button onclick="downloadIcon(32)">Download</button>
+    </div>
+    
+    <div class="canvas-item">
+      <h3>48x48</h3>
+      <canvas id="canvas48" width="48" height="48"></canvas>
+      <button onclick="downloadIcon(48)">Download</button>
+    </div>
+    
+    <div class="canvas-item">
+      <h3>128x128</h3>
+      <canvas id="canvas128" width="128" height="128"></canvas>
+      <button onclick="downloadIcon(128)">Download</button>
+    </div>
+  </div>
+  
+  <div class="instructions">
+    <h2>Instructions</h2>
+    <ol>
+      <li>Click each "Download" button to save the icon</li>
+      <li>Save each file as <code>icon16.png</code>, <code>icon32.png</code>, <code>icon48.png</code>, and <code>icon128.png</code></li>
+      <li>Move all 4 files to the <code>icons/</code> folder</li>
+      <li>Load the extension in Chrome at <code>chrome://extensions</code></li>
+    </ol>
+    <p><strong>Note:</strong> These are simple placeholder icons. For better quality, use a design tool or online icon generator.</p>
+  </div>
+  
+  <script>
+    // Draw icons on all canvases
+    function drawIcon(size) {
+      const canvas = document.getElementById(`canvas${size}`);
+      const ctx = canvas.getContext('2d');
+      
+      // Background
+      ctx.fillStyle = '#1a73e8';
+      ctx.fillRect(0, 0, size, size);
+      
+      // Scale factors
+      const scale = size / 24;
+      
+      // White document icon
+      ctx.fillStyle = 'white';
+      
+      // Outer rectangle (document)
+      const padding = 3 * scale;
+      const rectSize = size - (padding * 2);
+      ctx.fillRect(padding, padding, rectSize, rectSize);
+      
+      // Blue inner elements (template grid)
+      ctx.fillStyle = '#1a73e8';
+      
+      const innerPadding = 6 * scale;
+      const boxSize = 5 * scale;
+      const gap = 2 * scale;
+      
+      // Top-left box
+      ctx.fillRect(innerPadding, innerPadding + boxSize, boxSize, boxSize);
+      
+      // Top-right lines
+      const lineX = innerPadding + boxSize + gap;
+      const lineWidth = rectSize - boxSize - gap - innerPadding;
+      const lineHeight = 2 * scale;
+      
+      ctx.fillRect(lineX, innerPadding + boxSize, lineWidth, lineHeight);
+      ctx.fillRect(lineX, innerPadding + boxSize + gap + lineHeight, lineWidth, lineHeight);
+      
+      // Bottom line
+      ctx.fillRect(innerPadding, innerPadding + boxSize * 2 + gap, boxSize, lineHeight);
+    }
+    
+    // Download icon
+    function downloadIcon(size) {
+      const canvas = document.getElementById(`canvas${size}`);
+      const link = document.createElement('a');
+      link.download = `icon${size}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
+    
+    // Initialize all canvases
+    [16, 32, 48, 128].forEach(drawIcon);
+  </script>
+</body>
+</html>
