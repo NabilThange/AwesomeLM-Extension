@@ -30,20 +30,14 @@ Choose one of these methods:
 1. Click **"Fork"** at the top-right of this repository.
 2. Clone your fork:
    ```bash
-   git clone [https://github.com/YOUR-USERNAME/AwesomeLM-Extension.git](https://github.com/YOUR-USERNAME/AwesomeLM-Extension.git)
+   git clone [https://github.com/NabilThange/AwesomeLM-Extension.git](https://github.com/NabilThange/AwesomeLM-Extension.git)
    cd AwesomeLM-Extension/Chrome-Extension/notebooklm-extension
    ```
 
-### Step 2: Prepare Extension Icons
-The extension needs icon files to work properly. Choose one option:
-
-* **Quick Setup**: Find any square image, rename it to `icon16.png`, `icon32.png`, `icon48.png`, and `icon128.png`. Place them in the `icons/` folder.
-* **Professional Icons**: Use a [Favicon Generator](https://www.favicon-generator.org/) with the included `icon.svg`.
-
-### Step 3: Install in Chrome
+### Step 2: Install in Chrome
 1. Open `chrome://extensions` in your browser.
 2. Enable **"Developer mode"** in the top-right corner.
-3. Click **"Load unpacked"** and select the `notebooklm-extension` folder.
+3. Click **"Load unpacked"** and select the `AwesomeLM-Extension` folder.
 
 ---
 
@@ -63,7 +57,7 @@ The extension needs icon files to work properly. Choose one option:
 ## 🛠️ File Structure
 
 ```text
-notebooklm-extension/
+AwesomeLM-Extension/
 ├── manifest.json          # Extension configuration
 ├── popup.html             # Extension popup UI
 ├── popup.js               # Popup logic & cache status
@@ -91,7 +85,7 @@ notebooklm-extension/
 
 ## 🐛 Troubleshooting
 
-* **Manifest Missing**: Ensure you selected the `notebooklm-extension` folder specifically, not the root repository folder.
+* **Manifest Missing**: Ensure you selected the `AwesomeLM-Extension` folder specifically, not the root repository folder.
 * **Icon Not Appearing**: Refresh the NotebookLM page and ensure the "Customize Slide Deck" modal is active.
 * **Loading Loop**: Check your internet connection or disable aggressive ad blockers that might block Supabase calls.
 
