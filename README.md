@@ -31,8 +31,11 @@ Choose one of these methods:
 
 #### Option A: Download ZIP (Easiest)
 1. Click the green **"Code"** button at the top of this repository.
+   ![cd-drpdwn](guide/cd-drpdwn.png)
 2. Select **"Download ZIP"**.
+   ![dwnld-zip](guide/dwnld-zip.png)
 3. Extract the ZIP file to your computer.
+   ![extract](guide/extract.png)
 4. Navigate to the `Chrome-Extension/AwesomeLM-Extension` folder.
 
 #### Option B: Fork & Clone (For Developers)
@@ -45,8 +48,12 @@ Choose one of these methods:
 
 ### Step 2: Install in Chrome
 1. Open `chrome://extensions` in your browser.
+   ![ext](guide/ext.png)
 2. Enable **"Developer mode"** in the top-right corner.
+   ![dev](guide/dev.png)
 3. Click **"Load unpacked"** and select the `AwesomeLM-Extension` folder.
+   ![load](guide/load.png)
+   ![select](guide/select.png)
 
 ---
 
