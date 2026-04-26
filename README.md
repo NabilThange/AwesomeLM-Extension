@@ -4,9 +4,11 @@ A Chrome extension that enhances NotebookLM's "Customize Slide Deck" feature wit
 
 ## 🎥 Demo Video
 
-https://github.com/NabilThange/AwesomeLM-Extension/assets/user-attachments/assets/awesomelm-extension-guide.mp4
+[![AwesomeLM Extension Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
-> **Note**: If the video doesn't display above, [click here to download it](https://github.com/NabilThange/AwesomeLM-Extension/raw/main/Chrome-Extension/notebooklm-extension/awesomelm-extension-guide.mp4)
+*Click the thumbnail above to watch the demo video*
+
+> **Alternative**: [Download the video directly](https://github.com/NabilThange/AwesomeLM-Extension/raw/main/Chrome-Extension/notebooklm-extension/awesomelm-extension-guide.mp4)
 
 > **Note**: This extension connects to a public Supabase database to fetch prompt templates. The Supabase anon key is intentionally exposed in the code—this is safe and standard practice for public read-only data.
 

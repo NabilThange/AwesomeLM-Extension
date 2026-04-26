@@ -3,7 +3,7 @@
   "name": "AwesomeLM NotebookLM Assistant",
   "version": "1.0.0",
   "description": "Enhance NotebookLM with AwesomeLM slide deck templates",
-  "permissions": ["storage"],
+  "permissions": ["storage", "alarms"],
   "host_permissions": [
     "https://notebooklm.google.com/*",
     "https://qyhtrqobtwmbymviezcs.supabase.co/*"

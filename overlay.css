@@ -549,3 +549,172 @@
     min-width: unset !important;
   }
 }
+
+/* ========================================
+   INLINE CAROUSEL STYLES
+   ======================================== */
+
+.nlm-carousel-container {
+  all: unset !important;
+  display: block !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  margin: 12px 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+  animation: nlmCarouselFadeIn 0.25s ease !important;
+}
+
+@keyframes nlmCarouselFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nlm-carousel-container * {
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.nlm-carousel-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 8px !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+
+.nlm-carousel-title {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #e8eaed !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+}
+
+.nlm-carousel-nav {
+  display: flex !important;
+  gap: 6px !important;
+  flex-shrink: 0 !important;
+  margin-left: auto !important;
+}
+
+.nlm-carousel-btn {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  background: transparent !important;
+  color: #9aa0a6 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 20px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  transition: all 0.15s ease !important;
+  flex-shrink: 0 !important;
+}
+
+.nlm-carousel-btn:hover {
+  border-color: #8ab4f8 !important;
+  color: #8ab4f8 !important;
+  background: rgba(138, 180, 248, 0.08) !important;
+}
+
+.nlm-carousel-wrap {
+  width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.nlm-carousel-wrap::-webkit-scrollbar {
+  display: none !important;
+}
+
+.nlm-carousel-track {
+  display: flex !important;
+  gap: 12px !important;
+  width: max-content !important;
+  padding-bottom: 4px !important;
+}
+
+.nlm-carousel-card {
+  flex: 0 0 140px !important;
+  width: 140px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transition: opacity 0.2s !important;
+}
+
+.nlm-carousel-card:hover {
+  opacity: 0.82 !important;
+}
+
+.nlm-carousel-thumb {
+  width: 100% !important;
+  height: 105px !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  border: 2.5px solid transparent !important;
+  background: #3a3b3e !important;
+  position: relative !important;
+  flex-shrink: 0 !important;
+  transition: border-color 0.2s !important;
+}
+
+.nlm-carousel-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.nlm-carousel-card.nlm-carousel-selected .nlm-carousel-thumb {
+  border-color: #8ab4f8 !important;
+}
+
+.nlm-carousel-check {
+  position: absolute !important;
+  top: 7px !important;
+  right: 7px !important;
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 50% !important;
+  background: #8ab4f8 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 0 !important;
+  transform: scale(0.4) !important;
+  transition: opacity 0.2s, transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  pointer-events: none !important;
+}
+
+.nlm-carousel-card.nlm-carousel-selected .nlm-carousel-check {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.nlm-carousel-label {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: #e8eaed !important;
+  margin-top: 8px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.3 !important;
+}
