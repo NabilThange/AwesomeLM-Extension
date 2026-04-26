@@ -2,6 +2,8 @@
 
 A Chrome extension that enhances NotebookLM's "Customize Slide Deck" feature with pre-built prompt templates from AwesomeLM.
 
+![Before and After Comparison](guide/before-after-comparison.jpg)
+
 ## 🎥 Demo Video
 
 <!-- Native video player -->
@@ -59,12 +61,21 @@ Choose one of these methods:
 
 ## 📖 How to Use
 
+### Method 1: Built-in Carousel (Recommended)
 1. **Open NotebookLM** and navigate to any notebook.
+   ![After Extension](guide/after-ext.png)
 2. **Click "Customize Slide Deck"** to open the slide creation modal.
-3. **Wait 1-2 seconds** for the modal to fully load.
-4. **Look for the AwesomeLM icon** (📋) in the bottom-right corner of the text area.
-5. **Click the icon** to open the template library.
-6. **Select a template** and choose:
+3. **Browse the template carousel** that appears natively in the modal (as if Google made it!).
+4. **Select a template** from the carousel.
+5. **Write or edit your prompt** in the text area.
+6. **Click "Generate"** to create your slides.
+
+### Method 2: Icon Popover (Alternative)
+1. **Open the "Customize Slide Deck"** modal.
+2. **Look for the AwesomeLM icon** (📋) in the bottom-right corner of the text area.
+3. **Click the icon** to open the template library popover.
+   ![Popover](guide/popover.png)
+4. **Select a template** and choose:
    * **"Fill"**: Adds the prompt to the text area.
    * **"Build It"**: Fills the prompt AND automatically generates the slides.
 
